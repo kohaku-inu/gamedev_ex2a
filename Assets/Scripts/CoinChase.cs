@@ -1,4 +1,5 @@
 using UnityEngine;
+using TMPro;
 
 public class CoinChase : MonoBehaviour
 {
@@ -6,6 +7,7 @@ public class CoinChase : MonoBehaviour
     [SerializeField, Tooltip("Min dist from coin to pick it up")] private float _pickupDist = 0.5f;
     [SerializeField, Tooltip("Timer (seconds) for game")] private float _timelimit = 30f;
     [SerializeField, Tooltip("-range to +range for random coin spawn")] private float _range = 4f;
+    [SerializeField] private TMP_Text _messageText;
     private int _score;
     private float _timeLeft;
     private bool _gameOver;
@@ -14,6 +16,7 @@ public class CoinChase : MonoBehaviour
     {
         _timeLeft = _timelimit;
         MoveToRandomPosition();
+        _messageText.text = "";
     }
 
     // Update is called once per frame
@@ -29,6 +32,8 @@ public class CoinChase : MonoBehaviour
         {
             _gameOver = true;
             Debug.Log("Time's up. Final score: " + _score);
+            _messageText.text = "Time's up!\nFinal score: " + _score;
+            return;
         }
         if (Vector2.Distance(transform.position, _player.position) <= _pickupDist)
         {
