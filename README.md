@@ -10,7 +10,7 @@
 - גודל האובייקטים קבוע - משאיר את האובייקטים בגודל קבוע, גובה ורוחב המסך והמצלמה משתנים בהתאם. Size = 0.5 × √(area ÷ aspect)  
 
 
-https://iritinbar.itch.io/squarechase
+https://kohaku-inu.itch.io/squarechase
 
 
 </div>
