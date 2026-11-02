@@ -22,13 +22,13 @@ public class CoinChase : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(_gameOver)
+        if (_gameOver)
         {
             return;
         }
 
         _timeLeft -= Time.deltaTime; // delta.time = number of second between the start of the previous frame and the start of the current one
-        if(_timeLeft <= 0f)
+        if (_timeLeft <= 0f)
         {
             _gameOver = true;
             Debug.Log("Time's up. Final score: " + _score);
